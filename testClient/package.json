@@ -1,0 +1,15 @@
+{
+  "name": "testclient",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "E-Quipe",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "socket.io-client": "^4.7.5"
+  }
+}
