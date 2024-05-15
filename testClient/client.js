@@ -8,7 +8,7 @@ let username = 'tester'
 let room = 'testing-facility'
 
 // server URL goes inside the io()
-const socket = io('http://localhost:4201/')
+const socket = io('http://10.199.10.203:4201/')
 
 socket.emit('joinRoom', {username, room})
 

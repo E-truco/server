@@ -36,7 +36,7 @@ io.on("connection", (socket) => {
 
         const user = usersHandler.userJoin(socket.id, data.username, data.room)
 
-        socket.join(user.room)
+        socket.join(user.room) 
 
         socket.broadcast.to(user.room).emit('consoleMessage', new ConsoleMessage('Server', `${data.username} has connected!`))
     })
