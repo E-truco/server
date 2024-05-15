@@ -4,9 +4,13 @@
 
 const { io } = require("socket.io-client")
 
-// server URL goes inside the io()
-const socket = io()
+let username = 'tester'
+let room = 'testing-facility'
 
+// server URL goes inside the io()
+const socket = io('http://localhost:4201/')
+
+socket.emit('joinRoom', {username, room})
 
 // this will log the client's ID when connecting to the server
 socket.on("connect", () => {
@@ -17,3 +21,10 @@ socket.on("connect", () => {
 socket.on("disconnect", () => {
     console.log(socket.id)
 });
+
+
+socket.on('consoleMessage', (consoleMessage) => {
+
+    console.log(`${consoleMessage.username}: ${consoleMessage.text}`)
+
+})
