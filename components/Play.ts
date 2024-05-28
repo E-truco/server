@@ -1,10 +1,16 @@
+import Card from "./Card";
+import Team from "./Team";
 
 class Play{
 
+    currentPlayerOrder : number;
+    currentTeamOrder : number;
+    playedCards : Card[];
+
     constructor(){
 
-        this.currentPlayer = undefined;
-        this.currentTeam = undefined;
+        this.currentPlayerOrder = 0;
+        this.currentTeamOrder = 0;
 
     }
 
@@ -19,14 +25,14 @@ class Play{
     }
 
     // will award 1 play point to the winning team of that play, will only be called by the playHandler() method
-    givePlayPoint(winnerTeamID){
+    givePlayPoint(winnerTeam : Team){
 
-        winnerTeamID.playPoints += 1;
+        winnerTeam.playPoints += 1;
 
     }
 
     // this will check if any of the teams won
-    checkIfTeamWon(teams){
+    checkIfTeamWon(teams : Team[]){
         
     }
 
