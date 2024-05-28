@@ -3,10 +3,13 @@ import Player from './Player'
 class Team{
 
     teamID : string;
-    players : Player[]
+    players : Player[];
+    playPoints : number;
+    roundPoints : number;
 
-    constructor(teamID){
-        this.teamID = teamID
+    constructor(teamID : string){
+
+        this.teamID = teamID;
         this.players = [];
         this.playPoints = 0;
         this.roundPoints = 0;
@@ -14,7 +17,7 @@ class Team{
     }
 
     // this will receive a Player object and add it to the players[] list
-    addPlayer(player){
+    addPlayer(player : Player){
 
         try{
 
