@@ -1,14 +1,17 @@
 import PlayedRound from "./PlayedRound";
+import Team from "./Team";
 
 class Game{
 
     currentRound : number;
     roundHistory : PlayedRound[];
+    teams : Team[]
 
-    constructor(){
+    constructor(teams : Team[]){
 
         this.currentRound = 0;
         this.roundHistory = [];
+        this.teams = teams;
 
     }
 
