@@ -1,6 +1,8 @@
-
+import Card from './Card'
 
 class Player{
+
+    hand : Card[]
 
     constructor(playerID, nickname){
         this.hand = []

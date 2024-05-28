@@ -1,10 +1,14 @@
+import Player from './Player'
 
 class Team{
+
+    teamID : string;
+    players : Player[]
 
     constructor(teamID){
         this.teamID = teamID
         this.players = [];
-        this.handPoints = 0;
+        this.playPoints = 0;
         this.roundPoints = 0;
 
     }
@@ -25,14 +29,14 @@ class Team{
         return `PLAYER ADDED TO TEAM ${this.teamID}`
     }
 
-    // this will reset the handPoints (it can also be done directly by editing the variable but now we have the option to use this method =)
-    resetHandPoints(){
+    // this will reset the playPoints (it can also be done directly by editing the variable but now we have the option to use this method =)
+    resetPlayPoints(){
 
-        let oldPoints = this.handPoints;
+        let oldPoints = this.playPoints;
 
-        this.handPoints = 0;
+        this.playPoints = 0;
 
-        return `HAND POINTS SET TO 0. (FROMT ${oldPoints})`
+        return `PLAY POINTS SET TO 0. (FROMT ${oldPoints})`
     }
 
 }
