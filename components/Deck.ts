@@ -36,7 +36,7 @@ class Deck{
     }
 
     // this method will shuffle the deck using a implementation of the Fisher–Yates shuffle algorithm
-    shuffler(){
+    shuffle(){
         
         let currentIndex = this.cards.length;
 
