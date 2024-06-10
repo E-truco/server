@@ -1,4 +1,5 @@
 import Card from "./Card";
+import Player from "./Player";
 import Team from "./Team";
 
 class Play{
@@ -21,6 +22,14 @@ class Play{
 
     playHandler(){
 
+
+
+    }
+
+    // this is the handler for when a player plays a play
+    playerPlaysPlay(currentPlayer : Player, cardPlayed : Card){
+
+        
 
     }
 
