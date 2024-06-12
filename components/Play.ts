@@ -29,7 +29,7 @@ class Play{
     // this is the handler for when a player plays a play
     playerPlaysPlay(currentPlayer : Player, cardPlayed : Card){
 
-        
+            
 
     }
 
