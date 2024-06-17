@@ -1,19 +1,3 @@
-// let roomId = amazingMaruanStringMakerv10();
-
-
-// function checkingstuff {
-//     foreach (room as existingRooms){
-//     room = checkRoom(roomId);
-//     room == roomId
-// }
-
-// }
-
-// if (checkingstuff){
-
-//     existingRooms.push(roomId);
-// }
-
 
 // --------------------
 // this code snippet is under MIT license and can be found on: https://github.com/Tanglink-URL/random-string
@@ -38,7 +22,7 @@ function randString(length : number, set : string) : string {
 let activeRoomsList : string[] = [];
 
 
-
+// create a new room
 function createNewRoom(){
 
     let roomID : string;
@@ -51,7 +35,25 @@ function createNewRoom(){
 
     activeRoomsList.push(roomID)
 
-    return "Room successfully created."
+    return roomID
+
+}
+
+// delete an existing room
+function deleteRoom(roomID : string){
+
+    if(roomExists(roomID) == true){
+
+        let index = activeRoomsList.indexOf(roomID);
+
+        activeRoomsList.splice(index, 1);
+
+        return "Room successfully deleted."
+
+    }else{
+
+        return "Room ID could not be found."
+    }
 
 }
 
