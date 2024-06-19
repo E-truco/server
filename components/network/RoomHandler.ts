@@ -58,7 +58,7 @@ function deleteRoom(roomID : string){
 }
 
 
-function roomExists(newRoomID){
+function roomExists(newRoomID : string){
 
     for(let currentRoomID in activeRoomsList){
 
